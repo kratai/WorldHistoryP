@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.worldhistoryp.test1"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    android:background="@drawable/bgtest1">
+
+    <TextView
+        android:fontFamily="serif-monospace"
+        android:id="@+id/questionLabel"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:layout_marginTop="60dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorShapeThree"
+        android:padding="80dp"
+        android:gravity="center"/>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/chooseans"
+            android:layout_width="360dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ctba"/>
+
+    </FrameLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp" >
+
+        <Button
+            android:id="@+id/answerBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:onClick="checkAnswer"
+            android:text="answer1" />
+
+        <Button
+            android:id="@+id/answerBtn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="answer2"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"/>
+
+        <Button
+            android:id="@+id/answerBtn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="answer3"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"/>
+
+        <Button
+            android:id="@+id/answerBtn4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="answer4"
+            android:layout_marginTop="6dp"
+            android:onClick="checkAnswer"/>
+    </LinearLayout>
+
+</RelativeLayout>

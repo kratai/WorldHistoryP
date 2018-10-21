@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.worldhistoryp">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Home" />
+        <activity android:name=".Lesson" />
+        <activity android:name=".Test" />
+        <activity android:name=".Game" />
+        <activity android:name=".test1" />
+        <activity android:name=".test2" />
+        <activity android:name=".test3" />
+        <activity android:name=".America" />
+        <activity android:name=".Europe" />
+        <activity android:name=".Asia" />
+        <activity android:name=".Australia" />
+        <activity android:name=".Africa" />
+        <activity android:name=".ame1" />
+        <activity android:name=".ame2" />
+        <activity android:name=".ame3" />
+        <activity android:name=".ame4" />
+        <activity android:name=".ame5" />
+        <activity android:name=".ame6" />
+        <activity android:name=".ame7" />
+        <activity android:name=".ame8" />
+        <activity android:name=".sumscore" />
+        <activity android:name=".ame9" />
+        <activity android:name=".afri1" />
+        <activity android:name=".afri2" />
+        <activity android:name=".afri3" />
+        <activity android:name=".europe1" />
+        <activity android:name=".europe2" />
+        <activity android:name=".europe3" />
+        <activity android:name=".europe4" />
+        <activity android:name=".europe5" />
+        <activity android:name=".europe6" />
+        <activity android:name=".europe7" />
+        <activity android:name=".europe8" />
+        <activity android:name=".europe9" />
+        <activity android:name=".europe10" />
+        <activity android:name=".asia1" />
+        <activity android:name=".asia2" />
+        <activity android:name=".asia3" />
+        <activity android:name=".asia4" />
+        <activity android:name=".asia5" />
+        <activity android:name=".picquiz"></activity>
+    </application>
+
+</manifest>
