@@ -12,7 +12,7 @@ public class Africa extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
     private TextView[] mDots;
-    private SliderAdapter2 sliderAdapter2;
+    private SliderAdapterAfri sliderAdapterAfri;
 
 
     @Override
@@ -22,8 +22,8 @@ public class Africa extends AppCompatActivity {
         mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotlayout);
 
-        sliderAdapter2 = new SliderAdapter2(this);
-        mSlideViewPager.setAdapter(sliderAdapter2);
+        sliderAdapterAfri = new SliderAdapterAfri(this);
+        mSlideViewPager.setAdapter(sliderAdapterAfri);
 
         addDotsIndicator();
 

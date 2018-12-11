@@ -58,7 +58,45 @@
         <activity android:name=".asia3" />
         <activity android:name=".asia4" />
         <activity android:name=".asia5" />
-        <activity android:name=".picquiz"></activity>
+        <activity android:name=".picquiz" />
+        <activity android:name=".australia1" />
+        <activity android:name=".australia2" />
+        <activity android:name=".australia3" />
+        <activity android:name=".Time" />
+        <activity android:name=".LessonTime1" />
+        <activity android:name=".LessonTime2" />
+        <activity android:name=".LessonTime3" />
+        <activity android:name=".LessonTime4" />
+        <activity android:name=".LessonTime5" />
+        <activity android:name=".TimeAmerica" />
+        <activity android:name=".LessonTimeAme1" />
+        <activity android:name=".LessonTimeAme2" />
+        <activity android:name=".LessonTimeAme3" />
+        <activity android:name=".LessonTimeAfri1" />
+        <activity android:name=".TimeAfrica" />
+        <activity android:name=".TimeAustralia" />
+        <activity android:name=".LessonTimeAus1" />
+        <activity android:name=".TimeAsia" />
+        <activity android:name=".LessonTimeAsia1" />
+        <activity android:name=".LessonTimeAsia2" />
+        <activity android:name=".LessonTimeAsia3" />
+        <activity android:name=".LessonTimeAsia4" />
+        <activity android:name=".LessonTimeAsia5" />
+        <activity android:name=".asia6" />
+        <activity android:name=".asia7" />
+        <activity android:name=".asia8" />
+        <activity android:name=".asia9" />
+        <activity android:name=".asia10" />
+        <activity android:name=".asia11" />
+        <activity android:name=".asia12" />
+        <activity android:name=".asia13" />
+        <activity android:name=".europe11" />
+        <activity android:name=".europe12" />
+        <activity android:name=".europe13" />
+        <activity android:name=".europe14" />
+        <activity android:name=".europe15" />
+        <activity android:name=".europe16" />
+        <activity android:name=".GameQuiz"></activity>
     </application>
 
 </manifest>

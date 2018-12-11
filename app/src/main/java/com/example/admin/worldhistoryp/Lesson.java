@@ -9,7 +9,15 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.felipecsl.gifimageview.library.GifImageView;
+
+import org.apache.commons.io.IOUtils;
+
+import java.io.IOException;
+import java.io.InputStream;
+
 public class Lesson extends AppCompatActivity {
+
     LinearLayout linearamerica,lineareurasia,linearafricaaustralia;
     Animation lefttoright,righttoleft,downtoup;
 
@@ -35,7 +43,7 @@ public class Lesson extends AppCompatActivity {
         icamerica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getApplicationContext(),America.class);
+                Intent it = new Intent(getApplicationContext(),TimeAmerica.class);
                 startActivity(it);
             }
         });
@@ -45,7 +53,7 @@ public class Lesson extends AppCompatActivity {
         iceurope.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getApplicationContext(),Europe.class);
+                Intent it = new Intent(getApplicationContext(),Time.class);
                 startActivity(it);
             }
         });
@@ -55,7 +63,7 @@ public class Lesson extends AppCompatActivity {
         icafrica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getApplicationContext(),Africa.class);
+                Intent it = new Intent(getApplicationContext(),TimeAfrica.class);
                 startActivity(it);
             }
         });
@@ -65,7 +73,7 @@ public class Lesson extends AppCompatActivity {
         icasia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getApplicationContext(),Asia.class);
+                Intent it = new Intent(getApplicationContext(),TimeAsia.class);
                 startActivity(it);
             }
         });
@@ -75,7 +83,7 @@ public class Lesson extends AppCompatActivity {
         icaustralia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(getApplicationContext(),Australia.class);
+                Intent it = new Intent(getApplicationContext(),TimeAustralia.class);
                 startActivity(it);
             }
         });

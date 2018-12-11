@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/bgamerica"
-    tools:context="com.example.admin.worldhistoryp.america">
+    tools:context="com.example.admin.worldhistoryp.America">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/slideViewPager"

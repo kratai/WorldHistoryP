@@ -15,7 +15,7 @@ public class America extends AppCompatActivity {
 
     private TextView[] mDots;
 
-    private SliderAdapter sliderAdapter;
+    private SliderAdapterAme sliderAdapterAme;
 
 
     @Override
@@ -26,8 +26,8 @@ public class America extends AppCompatActivity {
         mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotlayout);
 
-        sliderAdapter = new SliderAdapter(this);
-        mSlideViewPager.setAdapter(sliderAdapter);
+        sliderAdapterAme = new SliderAdapterAme(this);
+        mSlideViewPager.setAdapter(sliderAdapterAme);
 
         addDotsIndicator();
 

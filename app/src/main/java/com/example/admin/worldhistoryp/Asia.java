@@ -11,7 +11,7 @@ public class Asia extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
     private TextView[] mDots;
-    private SliderAdapter4 sliderAdapter4;
+    private SliderAdapterAsia sliderAdapterAsia;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,8 +19,8 @@ public class Asia extends AppCompatActivity {
         mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotlayout);
 
-        sliderAdapter4 = new SliderAdapter4(this);
-        mSlideViewPager.setAdapter(sliderAdapter4);
+        sliderAdapterAsia = new SliderAdapterAsia(this);
+        mSlideViewPager.setAdapter(sliderAdapterAsia);
 
         addDotsIndicator();
     }

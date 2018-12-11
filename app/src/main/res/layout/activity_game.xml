@@ -48,13 +48,13 @@
 
             <ImageView
                 android:id="@+id/game1"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
                 android:layout_marginTop="1dp"
                 android:background="@drawable/circlebg"
                 android:clickable="true"
                 android:padding="10dp"
-                android:src="@drawable/ictest1" />
+                android:src="@drawable/icg1" />
         </LinearLayout>
     </LinearLayout>
 
@@ -74,12 +74,12 @@
 
             <ImageView
                 android:id="@+id/game2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/circlebgtwo"
                 android:padding="10dp"
-                android:src="@drawable/ictest2" />
+                android:src="@drawable/icg2" />
 
         </LinearLayout>
     </LinearLayout>
@@ -100,12 +100,12 @@
 
             <ImageView
                 android:id="@+id/game3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/circlebgthree"
                 android:padding="10dp"
-                android:src="@drawable/ictest3" />
+                android:src="@drawable/icg3" />
 
         </LinearLayout>
     </LinearLayout>

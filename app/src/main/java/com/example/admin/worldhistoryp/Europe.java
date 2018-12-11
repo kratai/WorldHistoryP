@@ -11,7 +11,7 @@ public class Europe extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
     private TextView[] mDots;
-    private SliderAdapter3 sliderAdapter3;
+    private SliderAdapterEu sliderAdapterEu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,8 +19,8 @@ public class Europe extends AppCompatActivity {
         mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotlayout);
 
-        sliderAdapter3 = new SliderAdapter3(this);
-        mSlideViewPager.setAdapter(sliderAdapter3);
+        sliderAdapterEu = new SliderAdapterEu(this);
+        mSlideViewPager.setAdapter(sliderAdapterEu);
 
         addDotsIndicator();
     }

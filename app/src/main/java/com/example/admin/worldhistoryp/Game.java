@@ -47,14 +47,14 @@ public class Game extends AppCompatActivity {
 //                startActivity(it);
 //            }
 //        });
-//        ImageView game3;
-//        game3 = (ImageView) findViewById(R.id.game3);
-//        game3.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent it = new Intent(getApplicationContext(),game2.class);
-//                startActivity(it);
-//            }
-//        });
+        ImageView game3;
+        game3 = (ImageView) findViewById(R.id.game3);
+        game3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(getApplicationContext(),GameQuiz.class);
+                startActivity(it);
+            }
+        });
     }
 }
