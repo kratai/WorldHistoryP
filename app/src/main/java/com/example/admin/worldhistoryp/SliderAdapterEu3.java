@@ -20,11 +20,11 @@ public class SliderAdapterEu3 extends PagerAdapter {
     }
 
     public int[] slide_images = {
-            R.drawable.numeurope6,
-            R.drawable.numeurope7,
-            R.drawable.numeurope8,
-            R.drawable.numeurope9,
-            R.drawable.numeurope10
+            R.drawable.lesseurope6,
+            R.drawable.lesseurope7,
+            R.drawable.lesseurope8,
+            R.drawable.lesseurope9,
+            R.drawable.lesseurope10
     };
     public String[] slide_heading = {
             " ",
@@ -55,39 +55,39 @@ public class SliderAdapterEu3 extends PagerAdapter {
         slieImageview.setImageResource(slide_images[position]);
 
 
-        slieImageview.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (position == 0) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe6.class);
-                    context.startActivity(it);
-                }
-                if (position == 1) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe7.class);
-                    context.startActivity(it);
-                }
-                if (position == 2) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe8.class);
-                    context.startActivity(it);
-                }
-                if (position == 3) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe9.class);
-                    context.startActivity(it);
-                }
-                if (position == 4) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe10.class);
-                    context.startActivity(it);
-                }
-
-            }
-
-        });
+//        slieImageview.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if (position == 0) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe6.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 1) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe7.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 2) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe8.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 3) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe9.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 4) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe10.class);
+//                    context.startActivity(it);
+//                }
+//
+//            }
+//
+//        });
 
         slideHeading.setText(slide_heading[position]);
 

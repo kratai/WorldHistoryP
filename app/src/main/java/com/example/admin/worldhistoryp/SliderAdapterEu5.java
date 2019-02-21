@@ -19,10 +19,10 @@ public class SliderAdapterEu5 extends PagerAdapter {
     }
 
     public int[] slide_images = {
-            R.drawable.numeurope13,
-            R.drawable.numeurope14,
-            R.drawable.numeurope15,
-            R.drawable.numeurope16
+            R.drawable.lesseurope13,
+            R.drawable.lesseurope14,
+            R.drawable.lesseurope15,
+            R.drawable.lesseurope16
     };
     public String[] slide_heading = {
             " ",
@@ -52,34 +52,34 @@ public class SliderAdapterEu5 extends PagerAdapter {
         slieImageview.setImageResource(slide_images[position]);
 
 
-        slieImageview.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (position == 0) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe13.class);
-                    context.startActivity(it);
-                }
-                if (position == 1) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe14.class);
-                    context.startActivity(it);
-                }
-                if (position == 2) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe15.class);
-                    context.startActivity(it);
-                }
-                if (position == 3) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe16.class);
-                    context.startActivity(it);
-                }
-
-            }
-
-        });
+//        slieImageview.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if (position == 0) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe13.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 1) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe14.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 2) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe15.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 3) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe16.class);
+//                    context.startActivity(it);
+//                }
+//
+//            }
+//
+//        });
 
         slideHeading.setText(slide_heading[position]);
 

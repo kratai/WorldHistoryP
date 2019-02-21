@@ -19,9 +19,9 @@ public class SliderAdapterEu extends PagerAdapter {
     }
 
     public int[] slide_images = {
-            R.drawable.numeurope1,
-            R.drawable.numeurope2,
-            R.drawable.numeurope3
+            R.drawable.lesseurope1,
+            R.drawable.lesseurope2,
+            R.drawable.lesseurope3
 
     };
     public String[] slide_heading = {
@@ -51,29 +51,29 @@ public class SliderAdapterEu extends PagerAdapter {
         slieImageview.setImageResource(slide_images[position]);
 
 
-        slieImageview.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (position == 0) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe1.class);
-                    context.startActivity(it);
-                }
-                if (position == 1) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe2.class);
-                    context.startActivity(it);
-                }
-                if (position == 2) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe3.class);
-                    context.startActivity(it);
-                }
-
-            }
-
-        });
+//        slieImageview.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if (position == 0) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe1.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 1) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe2.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 2) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe3.class);
+//                    context.startActivity(it);
+//                }
+//
+//            }
+//
+//        });
 
         slideHeading.setText(slide_heading[position]);
 

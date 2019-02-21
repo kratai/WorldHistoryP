@@ -22,7 +22,7 @@ public class SliderAdapterAme extends PagerAdapter{
 
 
     public  int[] slide_images = {
-            R.drawable.numame1
+            R.drawable.lessame1
     };
 
     public  String[] slide_heading = {
@@ -49,18 +49,18 @@ public class SliderAdapterAme extends PagerAdapter{
         slieImageview.setImageResource(slide_images[position]);
 
 
-        slieImageview.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if(position == 0) {
-
-                    Intent it = new Intent(context.getApplicationContext(), ame1.class);
-                    context.startActivity(it);
-                }
-            }
-
-       });
+//        slieImageview.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if(position == 0) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), ame1.class);
+//                    context.startActivity(it);
+//                }
+//            }
+//
+//       });
 
         slideHeading.setText(slide_heading[position]);
 

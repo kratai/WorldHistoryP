@@ -18,7 +18,7 @@ public class SliderAdapterAsia4 extends PagerAdapter {
     }
 
     public int[] slide_images = {
-            R.drawable.numasia11
+            R.drawable.lessasia11
 
     };
     public String[] slide_heading = {
@@ -46,19 +46,19 @@ public class SliderAdapterAsia4 extends PagerAdapter {
         slieImageview.setImageResource(slide_images[position]);
 
 
-        slieImageview.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (position == 0) {
-
-                    Intent it = new Intent(context.getApplicationContext(), asia11.class);
-                    context.startActivity(it);
-                }
-
-            }
-
-        });
+//        slieImageview.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if (position == 0) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), asia11.class);
+//                    context.startActivity(it);
+//                }
+//
+//            }
+//
+//        });
 
         slideHeading.setText(slide_heading[position]);
 

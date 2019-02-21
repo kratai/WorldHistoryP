@@ -9,4 +9,11 @@
     <color name="colorShapeFour">#7194D8</color>
     <color name="colorBG">#212121</color>
     <color name="textMenu">#e8eaf6</color>
+    <color name="questionrps">#553827</color>
+    <color name="questiont1">#C84920</color>
+    <color name="questiont2">#DB818A</color>
+    <color name="questiont3">#2A5420</color>
+
+
+
 </resources>

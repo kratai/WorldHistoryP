@@ -6,8 +6,11 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -15,6 +18,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class test1 extends AppCompatActivity {
+    Animation lefttoright,righttoleft;
 
     private ImageView chooseans;
     private TextView questionLabel;
@@ -51,12 +55,22 @@ public class test1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test1);
 
-        chooseans = (ImageView)findViewById(R.id.chooseans);
+//        chooseans = (ImageView)findViewById(R.id.chooseans);
         questionLabel = (TextView)findViewById(R.id.questionLabel);
         answerBtn1 = (Button)findViewById(R.id.answerBtn1);
         answerBtn2 = (Button)findViewById(R.id.answerBtn2);
         answerBtn3 = (Button)findViewById(R.id.answerBtn3);
         answerBtn4 = (Button)findViewById(R.id.answerBtn4);
+
+        lefttoright = AnimationUtils.loadAnimation(this,R.anim.lefttoright);
+        righttoleft = AnimationUtils.loadAnimation(this,R.anim.righttoleft);
+        lefttoright = AnimationUtils.loadAnimation(this,R.anim.lefttoright);
+        righttoleft = AnimationUtils.loadAnimation(this,R.anim.righttoleft);
+
+        //answerBtn1.setAnimation(lefttoright);
+        //answerBtn2.setAnimation(righttoleft);
+        //answerBtn3.setAnimation(lefttoright);
+        //answerBtn4.setAnimation(righttoleft);
 
         // Create quizArray from quizData.
         for (int i = 0; i < quizData.length; i++) {
@@ -99,6 +113,11 @@ public class test1 extends AppCompatActivity {
         answerBtn2.setText(quiz.get(1));
         answerBtn3.setText(quiz.get(2));
         answerBtn4.setText(quiz.get(3));
+        //140261 1.17 pm
+        answerBtn1.setAnimation(lefttoright);
+        answerBtn2.setAnimation(righttoleft);
+        answerBtn3.setAnimation(lefttoright);
+        answerBtn4.setAnimation(righttoleft);
 
         // Remove this quiz from quizArray.
         quizArray.remove(randomNum);
@@ -130,8 +149,10 @@ public class test1 extends AppCompatActivity {
                         showNextQuiz();
                     }
                     else{
-                                Intent it = new Intent(getApplicationContext(),sumscore.class);
-                                startActivity(it);
+                        Intent it = new Intent(getApplicationContext(),sumscore.class);
+                        it.putExtra("sum",rightAnswerCount);
+                        startActivity(it);
+                        finish();
                         //summary
                     }
                 }
@@ -157,7 +178,9 @@ public class test1 extends AppCompatActivity {
                     }
                     else{
                         Intent it = new Intent(getApplicationContext(),sumscore.class);
+                        it.putExtra("sum",rightAnswerCount);
                         startActivity(it);
+                        finish();
                         //summary
                     }
                 }

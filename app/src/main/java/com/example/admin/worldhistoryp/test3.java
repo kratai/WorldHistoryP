@@ -6,6 +6,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,6 +17,9 @@ import java.util.Collections;
 import java.util.Random;
 
 public class test3 extends AppCompatActivity {
+
+    Animation lefttoright,righttoleft;
+
     private ImageView chooseans;
     private TextView questionLabel;
     private Button answerBtn1;
@@ -31,16 +36,16 @@ public class test3 extends AppCompatActivity {
 
     String quizData[][] = {
             // {"Country", "Right Answer", "Choice1", "Choice2", "Choice3"}
-            {"การเกิดสงครามพิวนิกครั้งที1 เกิดจากความขัดแย้งกันในเรื่องใด", "ทิศตะวันตก", "ทิศตะวันออก", "ทิศเหนือ", "ทิศใต้"},
-            {"การประกาศอิสรภาพของอเมริกาได้รับการรับรองตามคำประกาศอิสรภาพของใคร", "ทอมัส เจฟเฟอร์สัน", "อับราฮัม ลิงคอร์น", "จอร์จ วอชิงตัน", "ทอมัส เอดิสัน"},
-            {"การเกิดสงครามกลางเมืองอเมริกาเกิดขึ้นระหว่างรัฐใด", "รัฐทางเหนือและรัฐทางใต้", "รัฐทางตะวันออกและรัฐทางใต้", "รัฐทางใต้และรัฐทางตะวันตก", "รัฐทางเหนือและรัฐทางตะวันตก"},
-            {"ใครเป็นคนประดิษฐ์หลอดไฟไส้คาร์บอน", "ทอมัส เอดิสัน", "อับลาฮัม ลิงคอร์น", "นีล อาร์มสตรอง", "เจ.เค.โรลว์ลิ่ง"},
-            {"สงครามโลกครั้งที่1ฝ่ายมหาอำนาจกลางนำโดยประเทศใดบ้าง", "เยอรมนี ออสเตรีย-ฮังการี อิตาลี", "อังกฤษ ฝรั่งเศส รัสเซีย", "เยอรมนี อังกฤษ อิตาลี", "อังกฤษ เซอร์เบีย รัสเซีย"},
-            {"การเกิดเศรษฐกิจตกต่ำครั้งใหญ่เริ่มมาจากประเทศใด", "สหรัฐอเมริกา", "อังกฤษ", "ญี่ปุ่น", "ฝรั่งเศส"},
-            {"ระเบิดนิวเคลียร์ที่สหรัฐทิ้งที่ฮิโรชิม่ามีชื่อว่าอะไร", "ลิตเทิลบอย", "แฟตแมน", "บูมบาย่า", "ลิตเทิลแฟตแมน"},
-            {"นักบินอวกาศที่ได้เหยียบดวงจันทร์คนแรกคือใคร", "นีล อาร์มสตรอง", "เอดวิน แอลดริน", "ไมเคิล คอลลินส์", "จอห์น เคเนดี"},
-            {"ใครเป็นผู้พิชิตขั้วโลกใต้", "โรอัลด์ อามุนเซน", "มารี กูรี", "มาร์ติน ลูเทอร์", "เฟอร์ดินัน มาเจลลัน"},
-            {"เข็มทิศเป็นสิ่งประดิษฐ์ของประเทศใด", "จีน", "อังกฤษ", "ญี่ปุ่น", "อินเดีย"},
+            {"ในศาสนาฮินดูจะมีการแบ่งวรรณะเป็นกี่ชนชั้น และมีชนชั้นอะไรบ้าง", "4ชนชั้น พราหมณ์ กษัตริย์ แพศย์ ศูทร", "2ชนชั้น พราหมณ์ กษัตริย์", "1ชนชั้น พราหมณ์", "3ชนชั้น พราหมณ์ กษัตริย์ แพศย์"},
+            {"เส้นที่ถูกใช้ในการแบ่งอณาเขตเกาหลีเหนือ และเกาหลีใต้คือ", "ละติจูดที่ 38", "ลองจิจูดที่ 38", "ละติจูดที่ 23", "ลองจิจูดที่ 23"},
+            {"ยุคตื่นทองในออสเตรเลียเกิดจากใครเป็นผู้ค้นพบแร่ทอง", "เอดเวิร์ด ฮาร์กรีฟส์", "มาร์โคโปโล", "คริสโตเฟอร์ โคลัมบัส", "ลีโอนาโด ดาวินชี"},
+            {"วินาศกรรม 9/11 เป็นเหตุให้ตึกใดในสหรัฐอเมริกาถล่ม", "เวิล์ดเทรด1 และ2", "เอ็มไพร์เสตต", "นิวยอร์คไทมส์", "432 พาร์กแอเวนู"},
+            {"พีระมิดที่ถือเป็น 7 สิ่งมหัศจรรย์ของโลกมีชื่อว่า", "พีระมิดแห่งกีซา", "พีระมิดซิกกุรัต", "พีระมิดโจเซอร์", "พีระมิดแดง"},
+            {"กลุ่มที่มีบทบาทในการล้มราชวงศ์หยวนมีชื่อว่าอะไร", "กบฏโพกผ้าแดง", "กบฏนักมวย", "กบฏชาวนา", "กบฏเมืองแมนแดนสันติ"},
+            {"การเกิดสงครามฝิ่นในจีนทำให้จีนต้องลงนามในสนธิสัญญาอะไร และต้องยกที่ดินตรงไหนให้อังกฤษเช่า", "สนธิสัญญาหนานจิง/ฮ่องกง", "สนธิสัญญานานกิง/เซี่ยงไฮ้", "สนธิสัญญาปักกิ่ง/มาเก๊า", "สนธิสัญญาหนานจิง/ไทเป"},
+            {"จุดเริ่มต้นของปีฮิจญ์เราะห์ศักราชเกิดจากอะไร", "การอพยพจากนครเมกะไปเมืองเมดีนา", "การอพยพจากเมืองเมดีนาไปนครเมกะ", "การตั้งรกรากที่นครเมกะ", "การตั้งรกรากที่เมืองเมดีนา"},
+            {"ดาวเทียมดวงแรกถูกส่งจากประเทศใด และมีชื่อว่าอะไร", "สหภาพโซเวียต/ดาวเทียมสปุตนิค 1", "สหรัฐอเมริกา/ดาวเทียมเอ็กซ์พลอเรอ 1", "จีน/ดาวเทียมตงฟังหง 1", "ญี่ปุ่น/ดาวเทียมโอซุมิ"},
+            {"ผู้ค้นพบทวีปออสเตรเลียมีชื่อว่าอะไร มาจากประเทศใด", "เจมส์ คุก จากประเทศอังกฤษ", "คริสโตเฟอร์ โคลัมบัส จากสหรัฐอเมริกา", "เดวิด ลิฟวิงสโตน จากประเทศอังกฤษ", "อเมริโก เวสปุชชี จากประเทศออิตาลี"},
 
     };
 
@@ -49,12 +54,17 @@ public class test3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test3);
-        chooseans = (ImageView) findViewById(R.id.chooseans);
+//        chooseans = (ImageView) findViewById(R.id.chooseans);
         questionLabel = (TextView) findViewById(R.id.questionLabel);
         answerBtn1 = (Button) findViewById(R.id.answerBtn1);
         answerBtn2 = (Button) findViewById(R.id.answerBtn2);
         answerBtn3 = (Button) findViewById(R.id.answerBtn3);
         answerBtn4 = (Button) findViewById(R.id.answerBtn4);
+
+        lefttoright = AnimationUtils.loadAnimation(this,R.anim.lefttoright);
+        righttoleft = AnimationUtils.loadAnimation(this,R.anim.righttoleft);
+        lefttoright = AnimationUtils.loadAnimation(this,R.anim.lefttoright);
+        righttoleft = AnimationUtils.loadAnimation(this,R.anim.righttoleft);
 
         // Create quizArray from quizData.
         for (int i = 0; i < quizData.length; i++) {
@@ -96,6 +106,11 @@ public class test3 extends AppCompatActivity {
         answerBtn3.setText(quiz.get(2));
         answerBtn4.setText(quiz.get(3));
 
+        answerBtn1.setAnimation(lefttoright);
+        answerBtn2.setAnimation(righttoleft);
+        answerBtn3.setAnimation(lefttoright);
+        answerBtn4.setAnimation(righttoleft);
+
         // Remove this quiz from quizArray.
         quizArray.remove(randomNum);
 
@@ -125,8 +140,10 @@ public class test3 extends AppCompatActivity {
                         showNextQuiz();
                     }
                     else{
-                        Intent it = new Intent(getApplicationContext(),sumscore.class);
+                        Intent it = new Intent(getApplicationContext(),sumscore3.class);
+                        it.putExtra("sum",rightAnswerCount);
                         startActivity(it);
+                        finish();
                         //summary
                     }
                 }
@@ -151,8 +168,10 @@ public class test3 extends AppCompatActivity {
                         showNextQuiz();
                     }
                     else{
-                        Intent it = new Intent(getApplicationContext(),sumscore.class);
+                        Intent it = new Intent(getApplicationContext(),sumscore3.class);
+                        it.putExtra("sum",rightAnswerCount);
                         startActivity(it);
+                        finish();
                         //summary
                     }
                 }

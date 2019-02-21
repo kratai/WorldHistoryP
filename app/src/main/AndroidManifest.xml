@@ -96,7 +96,14 @@
         <activity android:name=".europe14" />
         <activity android:name=".europe15" />
         <activity android:name=".europe16" />
-        <activity android:name=".GameQuiz"></activity>
+        <activity android:name=".GameQuiz" />
+        <activity android:name=".RockPaperScissor" />
+        <activity android:name=".QuizRPS" />
+        <activity android:name=".RPSsum" />
+        <activity android:name=".sumscore2" />
+        <activity android:name=".sumscore3" />
+        <activity android:name=".sumscoreGQ" />
+        <activity android:name=".CardGame"></activity>
     </application>
 
 </manifest>

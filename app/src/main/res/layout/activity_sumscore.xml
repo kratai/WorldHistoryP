@@ -5,24 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".sumscore"
-    android:background="@drawable/bgscore">
+    android:background="@drawable/bgsumscore">
 
-    <ImageView
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+    <!--<ImageView-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="100dp"-->
 
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="102dp"
-        android:src="@drawable/welldone" />
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="102dp"-->
+        <!--android:src="@drawable/welldone" />-->
 
-    <ImageView
-        android:layout_width="400dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="218dp"
-        android:src="@drawable/yourscore" />
+    <!--<ImageView-->
+        <!--android:layout_width="400dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginTop="218dp"-->
+        <!--android:src="@drawable/yourscore" />-->
 
     <TextView
         android:id="@+id/totalscore"
@@ -34,6 +34,6 @@
         android:fontFamily="sans-serif-condensed"
         android:text="score"
         android:textColor="@color/colorShapeThree"
-        android:textSize="40sp" />
+        android:textSize="80sp" />
 
 </RelativeLayout>

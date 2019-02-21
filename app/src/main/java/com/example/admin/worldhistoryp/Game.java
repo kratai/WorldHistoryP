@@ -38,15 +38,15 @@ public class Game extends AppCompatActivity {
             }
         });
 
-//        ImageView game2;
-//        game2 = (ImageView) findViewById(R.id.game2);
-//        game2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent it = new Intent(getApplicationContext(),game2.class);
-//                startActivity(it);
-//            }
-//        });
+        ImageView game2;
+        game2 = (ImageView) findViewById(R.id.game2);
+        game2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(getApplicationContext(),RockPaperScissor.class);
+                startActivity(it);
+            }
+        });
         ImageView game3;
         game3 = (ImageView) findViewById(R.id.game3);
         game3.setOnClickListener(new View.OnClickListener() {

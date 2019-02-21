@@ -20,8 +20,8 @@ public class SliderAdapterEu4 extends PagerAdapter {
 
     public int[] slide_images = {
 
-            R.drawable.numeurope11,
-            R.drawable.numeurope12
+            R.drawable.lesseurope11,
+            R.drawable.lesseurope12
     };
     public String[] slide_heading = {
             " ",
@@ -49,24 +49,24 @@ public class SliderAdapterEu4 extends PagerAdapter {
         slieImageview.setImageResource(slide_images[position]);
 
 
-        slieImageview.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (position == 0) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe11.class);
-                    context.startActivity(it);
-                }
-                if (position == 1) {
-
-                    Intent it = new Intent(context.getApplicationContext(), europe12.class);
-                    context.startActivity(it);
-                }
-
-            }
-
-        });
+//        slieImageview.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if (position == 0) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe11.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 1) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), europe12.class);
+//                    context.startActivity(it);
+//                }
+//
+//            }
+//
+//        });
 
         slideHeading.setText(slide_heading[position]);
 

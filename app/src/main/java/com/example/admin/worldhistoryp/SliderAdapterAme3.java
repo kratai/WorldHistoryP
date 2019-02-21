@@ -21,7 +21,7 @@ public class SliderAdapterAme3 extends PagerAdapter {
 
 
     public  int[] slide_images = {
-            R.drawable.numame9
+            R.drawable.lessame9
     };
 
     public  String[] slide_heading= {
@@ -48,19 +48,19 @@ public class SliderAdapterAme3 extends PagerAdapter {
         slieImageview.setImageResource(slide_images[position]);
 
 
-        slieImageview.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if(position == 0) {
-
-                    Intent it = new Intent(context.getApplicationContext(), ame9.class);
-                    context.startActivity(it);
-                }
-
-            }
-
-        });
+//        slieImageview.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if(position == 0) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), ame9.class);
+//                    context.startActivity(it);
+//                }
+//
+//            }
+//
+//        });
 
         slideHeading.setText(slide_heading[position]);
 

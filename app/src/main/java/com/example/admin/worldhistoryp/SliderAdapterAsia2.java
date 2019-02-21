@@ -18,12 +18,12 @@ public class SliderAdapterAsia2 extends PagerAdapter {
     }
 
     public int[] slide_images = {
-            R.drawable.numasia4,
-            R.drawable.numasia5,
-            R.drawable.numasia6,
-            R.drawable.numasia7,
-            R.drawable.numasia8,
-            R.drawable.numasia9
+            R.drawable.lessasia4,
+            R.drawable.lessasia5,
+            R.drawable.lessasia6,
+            R.drawable.lessasia7,
+            R.drawable.lessasia8,
+            R.drawable.lessasia9
     };
     public String[] slide_heading = {
             " ",
@@ -55,45 +55,45 @@ public class SliderAdapterAsia2 extends PagerAdapter {
         slieImageview.setImageResource(slide_images[position]);
 
 
-        slieImageview.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (position == 0) {
-
-                    Intent it = new Intent(context.getApplicationContext(), asia4.class);
-                    context.startActivity(it);
-                }
-                if (position == 1) {
-
-                    Intent it = new Intent(context.getApplicationContext(), asia5.class);
-                    context.startActivity(it);
-                }
-                if (position == 2) {
-
-                    Intent it = new Intent(context.getApplicationContext(), asia6.class);
-                    context.startActivity(it);
-                }
-                if (position == 3) {
-
-                    Intent it = new Intent(context.getApplicationContext(), asia7.class);
-                    context.startActivity(it);
-                }
-                if (position == 4) {
-
-                    Intent it = new Intent(context.getApplicationContext(), asia8.class);
-                    context.startActivity(it);
-                }
-                if (position == 5) {
-
-                    Intent it = new Intent(context.getApplicationContext(), asia9.class);
-                    context.startActivity(it);
-                }
-
-
-            }
-
-        });
+//        slieImageview.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                if (position == 0) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), asia4.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 1) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), asia5.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 2) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), asia6.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 3) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), asia7.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 4) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), asia8.class);
+//                    context.startActivity(it);
+//                }
+//                if (position == 5) {
+//
+//                    Intent it = new Intent(context.getApplicationContext(), asia9.class);
+//                    context.startActivity(it);
+//                }
+//
+//
+//            }
+//
+//        });
 
         slideHeading.setText(slide_heading[position]);
 
